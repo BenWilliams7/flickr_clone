@@ -1,0 +1,6 @@
+<h1>welcome</h1>
+
+<h3><%= current_user.email if current_user %></h3>
+
+<%= link_to 'sign in', new_user_session_path if !current_user %><br><br>
+<%= link_to 'sign up', new_user_registration_path if !current_user %>
