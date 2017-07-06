@@ -6,4 +6,5 @@ class User < ApplicationRecord
 
   # before_action :authenticatae_user!
   has_many :images
+  
 end

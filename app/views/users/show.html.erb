@@ -4,4 +4,14 @@
   email: <%= current_user.email %>
 </p>
 
+<%= link_to 'Upload Image', new_user_image_path(current_user) %>
+
+<br>
+<% @user.images.each do |image| %>
+<%= image_tag image.file.url %>
+<%= image.name %>
+<%= image.description %><br>
+
+<% end %>
+
 <%= link_to 'sign out', destroy_user_session_path, :method => :delete if current_user %><br><br>

@@ -4,6 +4,8 @@ Rails.application.routes.draw do
 
   root to: 'pages#index'
 
-  resources :users
+  resources :users do
+    resources :images
+  end
 
 end

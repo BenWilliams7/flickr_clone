@@ -1,0 +1,13 @@
+<%= form_for [@user, @image] do |f| %>
+  <div class="form-group">
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+    <%= f.label :description %>
+    <%= f.text_field :description %>
+    <%= f.label :file, class: 'col-sm-2 control-label'  %>
+    <%= f.file_field :file %>
+    <div class="col-sm-offset-2 col-sm-6">
+      <%= f.submit "Upload", class: "btn btn-primary" %>
+    </div>
+  </div>
+<% end %>
